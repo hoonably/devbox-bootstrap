@@ -454,6 +454,9 @@ fi
 # .tmux.conf 복사
 deploy_config_file "$SCRIPT_DIR/config/.tmux.conf" "$HOME/.tmux.conf" 600
 
+# SSH 로그인 Bash에서도 ~/.bashrc를 읽도록 설정
+deploy_config_file "$SCRIPT_DIR/config/.bash_profile" "$HOME/.bash_profile" 600
+
 # .bashrc 설정을 ~/.bashrc에 추가 (idempotent)
 BASHRC="$HOME/.bashrc"
 touch "$BASHRC"
